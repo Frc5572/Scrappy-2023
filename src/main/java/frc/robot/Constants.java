@@ -13,12 +13,20 @@ public final class Constants {
      * Motor CAN id's.
      */
     public static final class Motors {
+        public static final int FRONTLEFTMOTORID = 1;
+        public static final int FRONTRIGHTMOTORID = 1;
+        public static final int BACKLEFTMOTORID = 1;
+        public static final int BACKRIGHTMOTORID = 1;
+        public static final double powerDecrease = .5;
+
     }
 
     /**
      * Pneumatics CAN id constants.
      */
     public static final class Pneumatics {
+        public static final int forward = 0;
+        public static final int backward = 0;
     }
 
     /**
@@ -30,4 +38,8 @@ public final class Constants {
         public static final double targetHeight = 0;
         public static final double limelightAngle = 0;
     }
+
+    
+
+    
 }
