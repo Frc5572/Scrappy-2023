@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.DutyCycleEncoder;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
-/*
+/**
  * Creates the Arm subsystem
  */
 public class Arm extends SubsystemBase {
@@ -19,7 +19,7 @@ public class Arm extends SubsystemBase {
         arm_M1.setInverted(false);
     }
 
-    /*
+    /**
      * Gets the angle of the Arm via the Encoder;
      */
     public double GetArmAng() {
@@ -29,7 +29,7 @@ public class Arm extends SubsystemBase {
         return armAngle;
     }
 
-    /*
+    /**
      * Moves the arm to the desired angle;
      */
     public void ArmSetToGoal(double angleGoal) {
@@ -38,7 +38,7 @@ public class Arm extends SubsystemBase {
         }
     }
 
-    /*
+    /**
      * Stops the Arm;
      */
     public void ArmStop() {
