@@ -38,6 +38,9 @@ public class Arm extends SubsystemBase {
         }
     }
 
+    /*
+     * Stops the Arm;
+     */
     public void ArmStop() {
         arm_M1.set(0.0);
     }
