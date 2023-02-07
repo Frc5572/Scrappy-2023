@@ -30,4 +30,14 @@ public final class Constants {
         public static final double targetHeight = 0;
         public static final double limelightAngle = 0;
     }
+    /*
+     * Creates the Arm constants
+     */
+    public static final class ArmConstants {
+        public static final int Arm_M1ID = 0;
+        public static final int EncoderID = 0;
+        public static final double EncOffset = 0.0;
+        public static final double angleSecondPosition = 0.0;
+        public static final double armHomePosition = 0.0;
+    }
 }
