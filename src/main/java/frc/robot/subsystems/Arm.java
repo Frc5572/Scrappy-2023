@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 /**
- * Creates the Arm subsystem
+ * Creates the Arm subsystem.
  */
 public class Arm extends SubsystemBase {
     // 1 Neo Motor Semi-Confirmed for the arm.
@@ -15,7 +15,7 @@ public class Arm extends SubsystemBase {
     private CANSparkMax arm_M1;
 
     /**
-     * Creates a constructor for the arm
+     * Creates a constructor for the arm.
      */
     public Arm() {
         arm_M1 = new CANSparkMax(Constants.ArmConstants.Arm_M1ID, MotorType.kBrushless);
@@ -23,7 +23,7 @@ public class Arm extends SubsystemBase {
     }
 
     /**
-     * @returns The angle of the Arm via the Encoder
+     * @returns The angle of the Arm via the Encoder.
      */
     public double GetArmAng() {
         double armAngle =
@@ -33,9 +33,9 @@ public class Arm extends SubsystemBase {
     }
 
     /**
-     * Moves the arm to the desired angle;
+     * Moves the arm to the desired angle.
      *
-     * @param angleGoal the desired angle for the goal
+     * @param angleGoal the desired angle for the goal.
      */
     public void ArmSetToGoal(double angleGoal) {
         if (!(Math.abs(GetArmAng() - angleGoal) < 5)) {
@@ -44,7 +44,7 @@ public class Arm extends SubsystemBase {
     }
 
     /**
-     * Stops the Arm;
+     * Stops the Arm.
      */
     public void ArmStop() {
         arm_M1.set(0.0);
