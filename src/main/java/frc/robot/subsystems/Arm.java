@@ -14,13 +14,16 @@ public class Arm extends SubsystemBase {
     private DutyCycleEncoder absEncoder1 = new DutyCycleEncoder(Constants.ArmConstants.EncoderID);
     private CANSparkMax arm_M1;
 
-    public void Arm() {
+    /**
+     * Creates a constructor for the arm
+     */
+    public Arm() {
         arm_M1 = new CANSparkMax(Constants.ArmConstants.Arm_M1ID, MotorType.kBrushless);
         arm_M1.setInverted(false);
     }
 
     /**
-     * Gets the angle of the Arm via the Encoder;
+     * @returns The angle of the Arm via the Encoder
      */
     public double GetArmAng() {
         double armAngle =
@@ -31,6 +34,8 @@ public class Arm extends SubsystemBase {
 
     /**
      * Moves the arm to the desired angle;
+     *
+     * @param angleGoal the desired angle for the goal
      */
     public void ArmSetToGoal(double angleGoal) {
         if (!(Math.abs(GetArmAng() - angleGoal) < 5)) {
