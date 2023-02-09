@@ -14,7 +14,7 @@ public class Arm extends SubsystemBase {
     private DutyCycleEncoder absEncoder1 = new DutyCycleEncoder(Constants.ArmConstants.EncoderID);
     private CANSparkMax arm_M1;
 
-    public void Arm() {
+    public void arm() {
         arm_M1 = new CANSparkMax(Constants.ArmConstants.Arm_M1ID, MotorType.kBrushless);
         arm_M1.setInverted(false);
     }
