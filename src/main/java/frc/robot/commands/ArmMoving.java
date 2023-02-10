@@ -12,6 +12,9 @@ public class ArmMoving extends CommandBase {
   private Arm arm1;
   private double goal;
 
+  /*
+   * This moves arm to goal.
+   */
   public ArmMoving(Arm arm1, double goal) {
     // Use addRequirements() here to declare subsystem dependencies.
     this.arm1 = arm1;
