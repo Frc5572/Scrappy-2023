@@ -7,6 +7,9 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Arm;
 
+/*
+ * Runs the Arm Methods.
+ */
 public class ArmMoving extends CommandBase {
   /** Creates a new ArmMoving. */
   private Arm arm1;
@@ -31,7 +34,9 @@ public class ArmMoving extends CommandBase {
     arm1.ArmSetToGoal(goal);
   }
 
-  // Called once the command ends or is interrupted.
+  /*
+   * Called once the command ends or is interrupted.
+   */
   @Override
   public void end(boolean interrupted) {
     arm1.ArmStop();
