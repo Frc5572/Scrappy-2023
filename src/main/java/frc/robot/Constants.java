@@ -5,6 +5,7 @@ package frc.robot;
  */
 
 public final class Constants {
+
     public static final double stickDeadband = 0.1;
     public static final int driverID = 0;
     public static final int operatorID = 1;
@@ -30,13 +31,16 @@ public final class Constants {
         public static final double targetHeight = 0;
         public static final double limelightAngle = 0;
     }
+
     /*
      * Constants for the Intake
      */
     public static final class IntakeConstants {
-        public static final int INTAKE_M1ID = 1;
-        public static final double INTAKE_IN_SPEED = 1.0;
-        public static final double INTAKE_OUT_SPEED = -1.0;
-        public static final double INTAKE_STOP = 0.0;
+        // public static final int INTAKE_M1ID = 1;
+        public static final int Arm_M1ID = 0;
+        public static final int EncoderID = 0;
+        public static final double EncOffset = 0.0;
+        public static final double angleSecondPosition = 0.0;
+        public static final double armHomePosition = 0.0;
     }
 }
