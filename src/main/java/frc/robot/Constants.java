@@ -31,15 +31,12 @@ public final class Constants {
         public static final double limelightAngle = 0;
     }
     /*
-     * Creates the Arm constants
+     * Constants for the Intake
      */
-    public static final class ArmConstants {
-        public static final int Arm_M1ID = 0;
-        public static final int EncoderID = 0;
-        public static final double EncOffset = 0.0;
-        public static final double armPosHome = 0.0;
-        public static final double armPosFloor = 0.0;
-        public static final double armPosMiddle = 0.0;
-        public static final double armPosTop = 0.0;
+    public static final class IntakeConstants {
+        public static final int INTAKE_M1ID = 1;
+        public static final double INTAKE_IN_SPEED = 1.0;
+        public static final double INTAKE_OUT_SPEED = -1.0;
+        public static final double INTAKE_STOP = 0.0;
     }
 }
