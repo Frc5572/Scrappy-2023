@@ -24,11 +24,11 @@ public class Drivetrain extends SubsystemBase {
      * Creates Drivetrain constructor
      */
     public Drivetrain() {
-        frontLeft = new WPI_TalonSRX(Constants.Motors.FRONTLEFTMOTORID);
-        backLeft = new WPI_TalonSRX(Constants.Motors.BACKLEFTMOTORID);
+        frontLeft = new WPI_TalonSRX(Constants.Motors.FRONT_LEFT_MOTOR_ID);
+        backLeft = new WPI_TalonSRX(Constants.Motors.BACK_LEFT_MOTOR_ID);
         leftGroup = new MotorControllerGroup(frontLeft, backLeft);
-        backRight = new WPI_TalonSRX(Constants.Motors.BACKRIGHTMOTORID);
-        frontRight = new WPI_TalonSRX(Constants.Motors.FRONTRIGHTMOTORID);
+        backRight = new WPI_TalonSRX(Constants.Motors.BACK_RIGHT_MOTORI_D);
+        frontRight = new WPI_TalonSRX(Constants.Motors.FRONT_RIGHT_MOTOR_ID);
         rightGroup = new MotorControllerGroup(frontRight, backRight);
         tankDrive = new DifferentialDrive(leftGroup, rightGroup);
         leftGroup.setInverted(true);
