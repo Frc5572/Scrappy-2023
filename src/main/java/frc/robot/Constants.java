@@ -30,6 +30,10 @@ public final class Constants {
         public static final double targetHeight = 0;
         public static final double limelightAngle = 0;
     }
+
+    /**
+     * Constants for the intake
+     */
     public static final class IntakeConstants {
         public static final int intake_M1ID = 1;
         public static final double intakeInSpeed = 1.0;
