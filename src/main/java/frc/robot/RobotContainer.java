@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import frc.robot.commands.TeleopDriveTrain;
 import frc.robot.subsystems.Drivetrain;
 
 /**
@@ -36,7 +37,7 @@ public class RobotContainer {
      */
     public RobotContainer() {
         SmartDashboard.putData("Choose Auto: ", autoChooser);
-        autoChooser.setDefaultOption("Do Nothing", new WaitCommand(1));
+        autoChooser.setDefaultOption("Drive", new TeleopDriveTrain(drivetrain, driver));
         // Configure the button bindings
         configureButtonBindings();
     }
@@ -47,11 +48,7 @@ public class RobotContainer {
      * ({@link edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a
      * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
      */
-    private void configureButtonBindings() {
-        driver.getRightTriggerAxis();
-
-
-    }
+    private void configureButtonBindings() {}
 
     /**
      * Gets the user's selected autonomous command.
