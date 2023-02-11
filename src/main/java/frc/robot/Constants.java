@@ -32,7 +32,7 @@ public final class Constants {
         public static final double limelightAngle = 0;
     }
 
-    /*
+    /**
      * Constants for the Arm Constants
      */
     public static final class ArmConstants {

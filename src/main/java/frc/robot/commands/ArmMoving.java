@@ -7,7 +7,7 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Arm;
 
-/*
+/**
  * Runs the Arm Methods.
  */
 public class ArmMoving extends CommandBase {
@@ -15,7 +15,7 @@ public class ArmMoving extends CommandBase {
     private Arm arm1;
     private double goal;
 
-    /*
+    /**
      * This moves arm to goal.
      */
     public ArmMoving(Arm arm1, double goal) {
@@ -31,21 +31,21 @@ public class ArmMoving extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        arm1.ArmSetToGoal(goal);
+        arm1.armSetToGoal(goal);
     }
 
-    /*
+    /**
      * Called once the command ends or is interrupted.
      */
     @Override
     public void end(boolean interrupted) {
-        arm1.ArmStop();
+        arm1.armStop();
     }
 
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
 
-        return Math.abs(arm1.GetArmAng() - goal) < 5;
+        return Math.abs(arm1.getArmAng() - goal) < 5;
     }
 }

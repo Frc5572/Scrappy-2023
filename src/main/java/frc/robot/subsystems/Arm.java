@@ -25,7 +25,7 @@ public class Arm extends SubsystemBase {
     /**
      * @returns The angle of the Arm via the Encoder.
      */
-    public double GetArmAng() {
+    public double getArmAng() {
         double armAngle =
 
             (absEncoder1.getAbsolutePosition() - Constants.ArmConstants.EncOffset) * 360;
@@ -37,8 +37,8 @@ public class Arm extends SubsystemBase {
      *
      * @param angleGoal the desired angle for the goal.
      */
-    public void ArmSetToGoal(double angleGoal) {
-        if (!(Math.abs(GetArmAng() - angleGoal) < 5)) {
+    public void armSetToGoal(double angleGoal) {
+        if (!(Math.abs(getArmAng() - angleGoal) < 5)) {
             arm_M1.set(0.1);
         }
     }
@@ -46,7 +46,7 @@ public class Arm extends SubsystemBase {
     /**
      * Stops the Arm.
      */
-    public void ArmStop() {
+    public void armStop() {
         arm_M1.set(0.0);
     }
 }
