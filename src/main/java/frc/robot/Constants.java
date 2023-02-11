@@ -5,6 +5,7 @@ package frc.robot;
  */
 
 public final class Constants {
+
     public static final double stickDeadband = 0.1;
     public static final int driverID = 0;
     public static final int operatorID = 1;
@@ -30,4 +31,21 @@ public final class Constants {
         public static final double targetHeight = 0;
         public static final double limelightAngle = 0;
     }
+
+    /**
+     * Constants for the Arm Constants
+     */
+    public static final class ArmConstants {
+        // public static final int INTAKE_M1ID = 1;
+        public static final int Arm_M1ID = 0;
+        public static final int EncoderID = 0;
+        public static final double EncOffset = 0.0;
+        public static final double angleSecondPosition = 0.0;
+        public static final double armPosHome = 0.0;
+        public static final double armPosFloor = 0.0;
+        public static final double armPosMiddle = 0.0;
+        public static final double armPosTop = 0.0;
+
+    }
+
 }
