@@ -7,6 +7,9 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Intake;
 
+/**
+ * Intake Command of the everybot Can take a cube and cone
+ */
 public class IntakeIn extends CommandBase {
   // Creates a new intakemoving.
 
