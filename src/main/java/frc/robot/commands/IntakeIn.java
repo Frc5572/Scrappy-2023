@@ -12,7 +12,6 @@ import frc.robot.subsystems.Intake;
  */
 public class IntakeIn extends CommandBase {
   // Creates a new intakemoving.
-
   private Intake intakein;
 
   public IntakeIn(Intake intakein) {
@@ -27,12 +26,10 @@ public class IntakeIn extends CommandBase {
   @Override
   public void execute() {
     this.intakein.IntakeIn();
-
   }
 
   // Called once the command ends or is interrupted.
   @Override
-
   public void end(boolean interrupted) {
     this.intakein.IntakeStop();
   }
