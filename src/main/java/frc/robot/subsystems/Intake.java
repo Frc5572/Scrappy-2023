@@ -6,6 +6,9 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 
+/**
+ * Subsystems for the Intake part of the arm
+ */
 public class Intake extends SubsystemBase {
     CANSparkMax intake_M1;
 
