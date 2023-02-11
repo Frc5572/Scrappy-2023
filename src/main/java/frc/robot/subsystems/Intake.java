@@ -13,16 +13,16 @@ public class Intake extends SubsystemBase {
         intake_M1 = new CANSparkMax(Constants.IntakeConstants.intake_M1ID, MotorType.kBrushless);
     }
 
-    public void IntakeIn() {
+    public void intakeIn() {
         intake_M1.set(Constants.IntakeConstants.intakeInSpeed);
 
     }
 
-    public void IntakeOut() {
+    public void intakeOut() {
         intake_M1.set(Constants.IntakeConstants.intakeOutSpeed);
     }
 
-    public void IntakeStop() {
+    public void intakeStop() {
         intake_M1.set(Constants.IntakeConstants.IntakeStop);
     }
 }

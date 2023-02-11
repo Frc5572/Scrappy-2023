@@ -26,13 +26,13 @@ public class IntakeOut extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    this.intakeout.IntakeOut();
+    this.intakeout.intakeOut();
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    this.intakeout.IntakeStop();
+    this.intakeout.intakeStop();
   }
 
   // Returns true when the command should end.
