@@ -32,8 +32,8 @@ public final class Constants {
     }
     public static final class IntakeConstants {
         public static final int intake_M1ID = 1;
-        public static final int intakeInSpeed = 1;
-        public static final int intakeOutSpeed = -1;
-        public static final int IntakeStop = 0;
+        public static final double intakeInSpeed = 1.0;
+        public static final double intakeOutSpeed = -1.0;
+        public static final double IntakeStop = 0.0;
     }
 }
