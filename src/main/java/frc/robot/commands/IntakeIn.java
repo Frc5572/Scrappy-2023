@@ -11,32 +11,32 @@ import frc.robot.subsystems.Intake;
  * Intake Command of the everybot Can take a cube and cone
  */
 public class IntakeIn extends CommandBase {
-  // Creates a new intakemoving.
-  private Intake intakein;
+    // Creates a new intakemoving.
+    private Intake intakein;
 
-  public IntakeIn(Intake intakein) {
-    this.intakein = intakein;
-  }
+    public IntakeIn(Intake intakein) {
+        this.intakein = intakein;
+    }
 
-  // Called when the command is initially scheduled.
-  @Override
-  public void initialize() {}
+    // Called when the command is initially scheduled.
+    @Override
+    public void initialize() {}
 
-  // Called every time the scheduler runs while the command is scheduled.
-  @Override
-  public void execute() {
-    this.intakein.IntakeIn();
-  }
+    // Called every time the scheduler runs while the command is scheduled.
+    @Override
+    public void execute() {
+        this.intakein.IntakeIn();
+    }
 
-  // Called once the command ends or is interrupted.
-  @Override
-  public void end(boolean interrupted) {
-    this.intakein.IntakeStop();
-  }
+    // Called once the command ends or is interrupted.
+    @Override
+    public void end(boolean interrupted) {
+        this.intakein.IntakeStop();
+    }
 
-  // Returns true when the command should end.
-  @Override
-  public boolean isFinished() {
-    return false;
-  }
+    // Returns true when the command should end.
+    @Override
+    public boolean isFinished() {
+        return false;
+    }
 }
