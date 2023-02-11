@@ -4,24 +4,32 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.Constants;
 import frc.robot.subsystems.Drivetrain;
 
+/**
+ * Creates a TeleopDriveTrain Command
+ */
 public class TeleopDriveTrain extends CommandBase {
     /** Creates a new TeleopDriveTrain. */
     Drivetrain drivetrain;
     CommandXboxController driver;
 
+    /**
+     * Creates a TeleopDriveTrain Constructor
+     *
+     * @param drivetrain The subsystem of TeleopDriveTrain Command
+     * @param driver CommandXboxController of driver
+     */
     public TeleopDriveTrain(Drivetrain drivetrain, CommandXboxController driver) {
         // Use addRequirements() here to declare subsystem dependencies
         this.drivetrain = drivetrain;
         this.driver = driver;
         addRequirements(drivetrain);
     }
-    
+
 
     // Called when the command is initially scheduled.
     @Override
