@@ -38,8 +38,8 @@ public class TeleopDriveTrain extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        drivetrain.driveTank(driver.getLeftY() * Constants.Motors.POWER_DECREASE,
-            driver.getRightY() * Constants.Motors.POWER_DECREASE);
+        drivetrain.driveTank(driver.getLeftY() * Constants.Drivetrain.POWER_DECREASE,
+            driver.getRightY() * Constants.Drivetrain.POWER_DECREASE);
 
     }
 

@@ -12,11 +12,11 @@ public final class Constants {
     /**
      * Motor CAN id's.
      */
-    public static final class Motors {
+    public static final class Drivetrain {
         public static final int FRONT_LEFT_MOTOR_ID = 1;
-        public static final int FRONT_RIGHT_MOTOR_ID = 1;
-        public static final int BACK_LEFT_MOTOR_ID = 1;
-        public static final int BACK_RIGHT_MOTORI_D = 1;
+        public static final int FRONT_RIGHT_MOTOR_ID = 3;
+        public static final int BACK_LEFT_MOTOR_ID = 2;
+        public static final int BACK_RIGHT_MOTOR_ID = 4;
         public static final double POWER_DECREASE = .5;
 
     }
