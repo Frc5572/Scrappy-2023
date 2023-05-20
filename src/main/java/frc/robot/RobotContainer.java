@@ -39,7 +39,7 @@ public class RobotContainer {
      */
     public RobotContainer() {
         SmartDashboard.putData("Choose Auto: ", autoChooser);
-        autoChooser.setDefaultOption("Drive", new TeleopDriveTrain(drivetrain, driver));
+        drivetrain.setDefaultCommand(new TeleopDriveTrain(drivetrain, driver));
         // Configure the button bindings
         configureButtonBindings();
     }
