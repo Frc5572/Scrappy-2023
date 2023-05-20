@@ -5,10 +5,11 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.WaitCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.commands.ArmMoving;
+import frc.robot.commands.TeleopDriveTrain;
 import frc.robot.subsystems.Arm;
+import frc.robot.subsystems.Drivetrain;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -18,8 +19,8 @@ import frc.robot.subsystems.Arm;
  */
 public class RobotContainer {
     /* Controllers */
-    private final CommandXboxController driver = new CommandXboxController(Constants.driverID);
-    private final CommandXboxController operator = new CommandXboxController(Constants.operatorID);
+    private final CommandXboxController driver = new CommandXboxController(Constants.DRIVER_ID);
+    private final CommandXboxController operator = new CommandXboxController(Constants.OPERATOR_ID);
 
     // Initialize AutoChooser Sendable
     private final SendableChooser<Command> autoChooser = new SendableChooser<>();
@@ -30,6 +31,7 @@ public class RobotContainer {
 
 
     /* Subsystems */
+    Drivetrain drivetrain = new Drivetrain();
     private final Arm arm1 = new Arm();
 
     /**
@@ -37,7 +39,7 @@ public class RobotContainer {
      */
     public RobotContainer() {
         SmartDashboard.putData("Choose Auto: ", autoChooser);
-        autoChooser.setDefaultOption("Do Nothing", new WaitCommand(1));
+        drivetrain.setDefaultCommand(new TeleopDriveTrain(drivetrain, driver));
         // Configure the button bindings
         configureButtonBindings();
     }
